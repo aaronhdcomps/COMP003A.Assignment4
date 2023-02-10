@@ -12,7 +12,7 @@ namespace COMP003A.Assignment4
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {   //
             //begin for loop section//
             Console.WriteLine("".PadRight(50, '*'));
             Console.WriteLine("for loop Section");
@@ -32,7 +32,7 @@ namespace COMP003A.Assignment4
             Console.WriteLine("\n");                          
             
             //end for loop section//
-            
+            //
             //begin foreach loop section//
             Console.WriteLine("".PadRight(50, '*'));
             Console.WriteLine("foreach Section");
@@ -49,12 +49,26 @@ namespace COMP003A.Assignment4
             Console.WriteLine("\n");
 
             //end foreach loop section//
-
+            //
             //begin do-while loop section//
             Console.WriteLine("".PadRight(50, '*'));
             Console.WriteLine("do-while Section");
             Console.WriteLine("Output 0-50 by 5s");
             Console.WriteLine("".PadRight(50, '*'));
+
+            int counter = 0;//----------|initial counter value set to 0
+
+            do
+            {
+                Console.WriteLine($"{counter}");//----<|Output current value of counter
+                counter += 5;//-----------------------<|Increment counter by 5
+            } while (counter <= 50);//----------------<|Run condition until counter is no longer less than or equal to 50
+
+            Console.WriteLine("\n");
+
+            //end do-while loop section//
+            //
+            //start while loop section//
 
 
         }
