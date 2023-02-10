@@ -63,14 +63,43 @@ namespace COMP003A.Assignment4
                 Console.WriteLine($"{counter}");//----<|Output current value of counter
                 counter += 5;//-----------------------<|Increment counter by 5
             } while (counter <= 50);//----------------<|Run condition until counter is no longer less than or equal to 50
-
+                                                     //|Condition evaluator is at end of do-while loop ensures codeblock is run at least once    
             Console.WriteLine("\n");
 
             //end do-while loop section//
             //
             //start while loop section//
+            Console.WriteLine("".PadRight(50, '*'));
+            Console.WriteLine("while Section");
+            Console.WriteLine("Output 1-20");
+            Console.WriteLine("If the number is divisible by 2, output Foo");
+            Console.WriteLine("If the number is divisible by 5, output Bar");
+            Console.WriteLine("If the number is divisible by 2 & 5, output FooBar");
+            Console.WriteLine("".PadRight(50, '*'));
 
+            int counter2 = 1;//-----------------------<|initial counter2 value set to 1
 
+            while (counter2 <= 20)//-------------------<|while loop with run condition until counter2 is no longer less than or equal to 20
+            {
+                if (counter2 % 2 == 0 && counter2 % 5 == 0)//<|The first if statement has to evaluate 
+                {                                           //|both conditions to avoid being skipped all together.  
+                    Console.WriteLine("FooBar");            //|If the 2 condition statement was placed at the end, 
+                }                                           //|either of the single modulus conditions for Foo or Bar
+                else if (counter2 % 2 == 0)                 //|would satisfy the if else statement and would output either 
+                {                                           //|Foo or Bar and continue to the next iteration of the loop
+                    Console.WriteLine("Foo");               
+                }                                           
+                else if (counter2 % 5 == 0)                 
+                {                                           
+                    Console.WriteLine("Bar");               
+                }                                           
+                else                                        
+                {                                           
+                    Console.WriteLine($"{counter2}");
+                }
+                counter2++;//-------------------------<|Increment counter2 by 1
+            }
+            //end while loop section//
         }
     }
 }
